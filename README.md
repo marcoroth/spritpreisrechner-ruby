@@ -1,8 +1,6 @@
 # Spritpreisrechner
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/spritpreisrechner`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is a Ruby Wrapper for the [e-Control.at Spritpreisrechner HTTP API](https://www.spritpreisrechner.at). Have a look at the [Swagger docs](https://api.e-control.at/sprit/1.0/doc/index.html?url=https://api.e-control.at/sprit/1.0/api-docs%3Fgroup%3Dpublic-apiT) for detailed info about the API. 
 
 ## Installation
 
@@ -22,7 +20,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Getting stations by LAT/LNG coordinates. The available Fuel Types are: `DIE` , `SUP` and `GAS`. The `closed` parameter is optional. 
+
+```ruby
+response = Spritpreisrechner::Station.by_address(lat: 48.208, lng: 16.373, fuel_type: 'DIE', closed: 'true')
+# => #<Spritpreisrechner::Response @stations=[#<Spritpreisrechner::Station @id=692206, @name="SPRIT-INN" ...>, #<Spritpreisrechner::Station @id=5093, @name="Turmöl" ...>, ... ] ... >
+
+```
+
+Getting stations by region:
+
+```ruby
+response = Spritpreisrechner::Station.by_region(code: 1, region_type: "BL", fuel_type: 'DIE', closed: 'true')
+# => #<Spritpreisrechner::Response @stations=[#<Spritpreisrechner::Station @id=394, @name="Avanti" ...>, #<Spritpreisrechner::Station @id=7586, @name="Landestankstelle Rdf. Partner Luisser" ...>, ... ] ... >
+
+```
+
+
+Getting all available regions:
+
+```ruby
+regions = Spritpreisrechner::Region.all
+# => [#<Sprtpreisrechner::Region @code=1, @type="BL", @name="Burgenland" ...>, #<Spritpreisrechner::Region @code=2, @type="BL", @name="Kärnten" ...> ...]
+```
+
+Getting a specific region:
+
+```ruby
+region = Spritpreisrechner::Region.find(1)
+# => #<Sprtpreisrechner::Region @code=1, @type="BL", @name="Burgenland" ...>
+```
+
 
 ## Development
 
