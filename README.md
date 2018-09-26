@@ -1,6 +1,6 @@
 # Spritpreisrechner
 
-This is a Ruby Wrapper for the [e-Control.at Spritpreisrechner HTTP API](https://www.spritpreisrechner.at). Have a look at the [Swagger docs](https://api.e-control.at/sprit/1.0/doc/index.html?url=https://api.e-control.at/sprit/1.0/api-docs%3Fgroup%3Dpublic-apiT) for detailed info about the API. 
+This is a Ruby Wrapper for the [e-Control.at Spritpreisrechner HTTP API](https://www.spritpreisrechner.at). Have a look at the [Swagger docs](https://api.e-control.at/sprit/1.0/doc/index.html?url=https://api.e-control.at/sprit/1.0/api-docs%3Fgroup%3Dpublic-api) for detailed info about the API. 
 
 ## Installation
 
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Getting stations by LAT/LNG coordinates. The available Fuel Types are: `DIE` , `SUP` and `GAS`. The `closed` parameter is optional. 
+Getting stations by LAT/LNG coordinates. The available Fuel Types are: `DIE` , `SUP` and `GAS`. The `closed` parameter is optional.
 
 ```ruby
 response = Spritpreisrechner::Station.by_address(lat: 48.208, lng: 16.373, fuel_type: 'DIE', closed: 'true')
