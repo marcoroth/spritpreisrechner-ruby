@@ -1,6 +1,7 @@
 # Spritpreisrechner
+![](https://api.travis-ci.com/marcoroth/spritpreisrechner-ruby.svg?branch=master)
 
-This is a Ruby Wrapper for the [e-Control.at Spritpreisrechner HTTP API](https://www.spritpreisrechner.at). Have a look at the [Swagger docs](https://api.e-control.at/sprit/1.0/doc/index.html?url=https://api.e-control.at/sprit/1.0/api-docs%3Fgroup%3Dpublic-api) for detailed info about the API. 
+This is a Ruby Wrapper for the [e-Control.at Spritpreisrechner HTTP API](https://www.spritpreisrechner.at). Have a look at the [Swagger docs](https://api.e-control.at/sprit/1.0/doc/index.html?url=https://api.e-control.at/sprit/1.0/api-docs%3Fgroup%3Dpublic-api) for detailed info about the API.
 
 ## Installation
 
@@ -65,3 +66,12 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/marcor
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## More Information
+
+[Spritpreisrechner Website](https://www.spritpreisrechner.at/)
+
+[RubyGems](https://rubygems.org/gems/spritpreisrechner)
+
+[Source Code](https://github.com/marcoroth/spritpreisrechner-ruby)
+
